@@ -18,8 +18,8 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "About Me"}
   - {file: "README.md", title: "Project Teams"}
-  - {file: "README.md", title: "Education"}
-  - {file: "README.md", title: "Skills"}
+  - {file: "/resume.pdf", title: "Education"}
+  - {file: "skills.txt", title: "Skills"}
   - {title: "url", url: "https://www.linkedin.com/in/erinmyoo/"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
