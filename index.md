@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "About Me"
+title: ""
 ---
 
-Senior in Mechanical Engineering at the University of Michigan 
-Concentration in Robotics
-Minors: Computer Science, Multidisciplinary Design
+University of Michigan
+
+BSE Mechanical Engineering - Concentration in Robotics
+
+Computer Science Minor
