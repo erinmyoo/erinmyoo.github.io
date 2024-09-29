@@ -15,8 +15,6 @@ blockquote {
 }
 </style>
 
-overflow: hidden;
-
 | CAD                             | FEA               | Programming Languages | Manufacturing            | Languages |
 | ---                             | ---               | ---                   | ---                      | ---       |        
 | Solidworks                      | Altair Hyperworks | C++                   | Mill                     | Korean    |
