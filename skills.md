@@ -1,6 +1,3 @@
----
-title: ""
----
 
 <style>
 table {
@@ -15,10 +12,12 @@ blockquote {
 }
 </style>
 
-| CAD                         | FEA               | Programming Languages | Manufacturing       | Languages |
-| ---                         | ---               | ---                   | ---                 | ---       |                                                                                                                                       
-| Solidworks                  | Altair Hyperworks | C++                   | Mill                | Korean    |
-| Siemens NX and Teamcenter   | ANSYS             | MATLAB                | 3D Printer          | French    |   
-| Onshape                     |                   | Python                | Solder              |           |
-|                             |                   | ROS                   | Lathe               |           |
-|                             |                   | ROS                   | Wetlay Carbon Fibe  |           |
+overflow: hidden;
+
+| CAD                             | FEA               | Programming Languages | Manufacturing            | Languages |
+| ---                             | ---               | ---                   | ---                      | ---       |        
+| Solidworks                      | Altair Hyperworks | C++                   | Mill                     | Korean    |
+| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printer               | French    |   
+| Onshape                         |                   | Python                | Solder                   |           |
+|                                 |                   | ROS                   | Lathe                    |           |
+|                                 |                   | ROS                   | Wetlay Carbon Fiber      |           |
