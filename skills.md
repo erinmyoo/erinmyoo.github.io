@@ -1,3 +1,6 @@
+---
+title: "Skills"
+---
 
 <style>
 table {
