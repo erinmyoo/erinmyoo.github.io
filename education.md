@@ -1,0 +1,15 @@
+---
+title: ""
+---
+
+## University of Michigan BSE Mechanical Engineering 2025
+# Robotics Concentration
+# Computer Science Minor
+# Multidisciplinary Design Minor
+
+## Campbell High School: International Baccalaureate 2021
+# International Baccalaureate Diploma Awarded 
+# 2021 Georgia Seal of Biliteracy verifying professional-level biliteracy and bilingualism in English and French
+# Junior Leadership Award 2020
+# President’s Volunteer Service Award 2019
+# Varsity Golf
