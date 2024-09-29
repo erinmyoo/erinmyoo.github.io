@@ -1,6 +1,7 @@
 ---
 title: "Solar Car"
 ---
+
 <p align="center">
   <img alt="Solar Car" src="https://github.com/erinmyoo/erinmyoo.github.io/blob/master/portfolio-images/Solar%20Car.png">
 </p>
