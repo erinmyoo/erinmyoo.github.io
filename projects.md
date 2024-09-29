@@ -14,7 +14,7 @@ The creation, design and manufacturing of the Mule Car Chassis on the Solar Car 
 <p align="center">
   <img alt="Mule Car Chassis Steel Frame" src="./portfolio-images/MuleCarChassisSteelFrame.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Assembled Mule Car" src="./portfolio-images/AssembledMuleCar.png" width="45%">
+  <img alt="Assembled Mule Car" src="portfolio-images/AssembledMuleCar.png" width="45%">
 </p>
 
 ## Tooling: Initial Upper and Lower Plug Design 
