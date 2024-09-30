@@ -6,6 +6,8 @@ title: ""
 - Robotics Concentration
 - Computer Science Minor
 - Multidisciplinary Design Minor
+- Wolverbot Kickers Vice President (2024-2025)
+- Solar Car Manufacturing and Testing Lead (2023-2024)
 
 ## Campbell High School: International Baccalaureate 2021
 - International Baccalaureate Diploma Awarded 
