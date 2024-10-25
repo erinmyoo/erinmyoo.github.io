@@ -10,4 +10,4 @@ I assisted with optimizing the second iteration of an amphibious UAV for water r
 For more information, visit [Motor Testing Documentation](https://github.com/erinmyoo/Motor-Thrust-Test).
 
 ## Wolverbot Kickers
-To compete in the Robocup Small-Sized Humanoid League, design of robotic arms with 3 DOF and 4 DOF are being designed and rapid prototyped.
+To compete in the Robocup Small-Sized Humanoid League, robotic arms with 3 DOF and 4 DOF are being designed and rapid prototyped.
