@@ -10,4 +10,7 @@ I assisted with optimizing the second iteration of an amphibious UAV for water r
 For more information, visit [Motor Testing Documentation](https://github.com/erinmyoo/Motor-Thrust-Test).
 
 ## Wolverbot Kickers
-To compete in the Robocup Small-Sized Humanoid League, robotic arms with 3 DOF and 4 DOF are being designed and rapid prototyped.
+To compete in the Robocup Small-Sized Humanoid League, robotic arms with 3 DOF are being designed and rapid prototyped through 3D printed. The first prototype can be seen in the image below. The black wooden dowel is only used for testing purposes to adjust the length of the arm. 
+<p align="center">
+  <img alt="3D printed Arm Design for testing functionality" src="/../portfolio-images/ArmPrototype.png" width="45%">
+</p>
