@@ -5,6 +5,9 @@ title: "Skills"
 <style>
 table {
     border-collapse: collapse;
+    width: 100%;
+    max-height: none !important;
+    overflow: visible !important;
 }
 table, th, td {
    border: none;
