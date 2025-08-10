@@ -9,7 +9,7 @@ title: "Solar Car"
 ## Wheel Assembly
 Designing the front hub and rear rim on the 2025 Solar Car to fit new packaging constraints and interface with the new motor.
 <p align="center">
-  <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="45%">
+  <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="40%">
 </p>
 
 ## Axle Optimization
@@ -24,7 +24,7 @@ The creation, design and manufacturing of the Mule Car Chassis on the Solar Car 
 </p>
 
 ## Tooling: Initial Upper and Lower Plug Design 
-The tooling, initial plugs, for the upper and lower parts of the car was designed in Siemens NX. I communicated with the manufacturer to determine any important features to add to the tooling such as surface finish, split lines and mold lines. Additionallu, I researched optimal tooling board density and plug to mold composite manufacturing process for a better surface finish.
-<p align="center">
+The tooling, initial plugs, for the upper and lower parts of the car was designed in Siemens NX. I communicated with the manufacturer to determine any important features to add to the tooling such as surface finish, split lines and mold lines. Additionally, I researched optimal tooling board density and plug to mold composite manufacturing process for a better surface finish.
+<div style="text-align: center;">
   <img alt="Initial Lower Plug Isometric View" src="/../portfolio-images/InitialLowerPlugIsometricView.png" width="45%">
-</p>
+</div>
