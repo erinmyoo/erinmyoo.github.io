@@ -9,9 +9,6 @@ table {
     max-height: none !important;
     overflow: visible !important;
 }
-thead tr th {
-    border-bottom: 3px solid #444; /* thicker */
-}
 blockquote {
     border-left: none;
     padding-left: 10px;
