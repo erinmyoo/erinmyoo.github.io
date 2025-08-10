@@ -9,8 +9,8 @@ table {
     max-height: none !important;
     overflow: visible !important;
 }
-table, th, td {
-   border: none;
+thead tr th {
+    border-bottom: 3px solid #444; /* thicker */
 }
 blockquote {
     border-left: none;
@@ -24,7 +24,7 @@ blockquote {
 | CAD                             | FEA               | Programming Languages | Manufacturing            | Languages |
 | ---                             | ---               | ---                   | ---                      | ---       |        
 | Solidworks                      | Altair Hyperworks | C++                   | Mill                     | Korean    |
-| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printer               | French    |   
+| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printing              | French    |   
 | Onshape                         |                   | Python                | Solder                   |           |
-|                                 |                   | ROS                   | Lathe                    |           |
+|                                 |                   | ROS/ROS2              | Lathe                    |           |
 |                                 |                   |                       | Wetlay Carbon Fiber      |           |
