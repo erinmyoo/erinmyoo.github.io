@@ -8,9 +8,9 @@ title: "Solar Car"
 
 ## Wheel Assembly
 Designing the front hub and rear rim on the 2025 Solar Car to fit new packaging constraints and interface with the new motor.
-<p align="center">
+<div style="text-align: center;">
   <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="40%">
-</p>
+</div>
 
 ## Axle Optimization
 The axle on the 2023 Solar Car (Astrum) was optimized to reduce mass and deflection while prioritizing minimizing bearing resistance. Analysis of the stress and deflection of the axle under 3 load cases was done through ANSYS, also exploring different axle geometries and materials. This analysis will inform the design of the 2025 Solar Car axle as cell as its impact on race time vs cost.
