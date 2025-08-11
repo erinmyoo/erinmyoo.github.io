@@ -12,5 +12,5 @@ For more information, visit [Motor Testing Documentation](https://github.com/eri
 ## Wolverbot Kickers
 To compete in the Robocup Small-Sized Humanoid League, robotic arms with 3 DOF are being designed and rapid prototyped through 3D printed. The first prototype can be seen in the image below. The black wooden dowel is only used for testing purposes to adjust the length of the arm. 
 <div style="text-align: center;">
-  <img alt="3D printed Arm Design for testing functionality" src="/../portfolio-images/ArmPrototype.png" width="30%">
+  <img alt="3D printed Arm Design for testing functionality" src="/../portfolio-images/ArmPrototype.png" width="100%">
 </div>
