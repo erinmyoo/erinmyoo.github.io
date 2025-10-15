@@ -2,6 +2,9 @@
 title: ""
 ---
 
+## Georgia Institute of Technology MS Mechanical Engineering
+- Start January 2026
+
 ## University of Michigan BSE Mechanical Engineering 2025
 - Robotics Concentration
 - Computer Science Minor
