@@ -11,14 +11,7 @@ permalink: /timeline/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline</title>
     <style>
-        /* Basic Reset */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
+        
         /* Timeline Container */
         .timeline {
             position: relative;
@@ -42,24 +35,16 @@ permalink: /timeline/
             transform: translateX(-50%); /* Center the timeline */
         }
 
-        /* Container for events */
-        .container {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
         /* Long-duration event container (left side with dot on right side) */
         .long-duration {
             position: relative;
-            width: 100%;
-            padding: 20px 10px;
-            box-sizing: border-box;
+            width: 30%;
+            padding: 20px;
             background-color: #2196F3;
             color: white;
             border-radius: 6px;
             text-align: center;
+            margin-right: 20px;
         }
 
         .long-duration::before {
@@ -77,7 +62,7 @@ permalink: /timeline/
         /* Sub-event containers (right side with dots to the left) */
         .sub-event {
             position: relative;
-            width: 45%;
+            width: 60%;
             background-color: #ff6347;
             color: white;
             padding: 10px;
@@ -99,37 +84,43 @@ permalink: /timeline/
             z-index: 1;
         }
 
-        .container.left .sub-event {
-            align-self: flex-start;
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .container.right .sub-event {
-            align-self: flex-end;
-        }
-
-        /* Content styling for each event */
-        h2, h3, p {
-            margin: 5px 0;
-        }
-
-        /* Responsiveness */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .sub-event {
+            .long-duration, .sub-event {
                 width: 90%;
             }
 
+            .sub-event {
+                margin-left: 0;
+            }
+
             .long-duration {
-                width: 90%;
+                margin-right: 0;
             }
         }
     </style>
 </head>
 <body>
 
-
 <div class="timeline">
-    <!-- Education Entry (Long Duration) -->
-    <div class="container left">
+        <!-- Another Work Experience (example) -->
+    <div class="container">
+        <div class="long-duration">
+            <p class="date">July - December 2025</p>
+            <h3>Hardware Test Engineering Intern</h3>
+            <p>Robot Company Name</p>
+        </div>
+    </div>
+    
+    <!-- Long-duration Event (Education) -->
+    <div class="container">
         <div class="long-duration">
             <h2>2021–2025</h2>
             <h3>Bachelor of Science in Mechanical Engineering</h3>
@@ -137,22 +128,22 @@ permalink: /timeline/
         </div>
     </div>
 
-    <!-- Sub-events within Education -->
-    <div class="container right">
+    <!-- Sub-events (e.g., internships, roles) -->
+    <div class="container">
         <div class="sub-event">
             <p class="date">January - July 2025</p>
             <h3>Engineering Intern</h3>
             <p>Robotics Stealth Startup</p>
         </div>
     </div>
-    <div class="container right">
+    <div class="container">
         <div class="sub-event">
             <p class="date">September 2024 - May 2025</p>
             <h3>Vice President and Mechanical Engineer</h3>
             <p>Wolverbot Kickers</p>
         </div>
     </div>
-    <div class="container right">
+    <div class="container">
         <div class="sub-event">
             <p class="date">June - August 2024</p>
             <h3>NSF REU: Collaborative Human-Robot Interaction</h3>
@@ -160,7 +151,7 @@ permalink: /timeline/
             <p>Built automated motor thrust stand with DAQ</p>
         </div>
     </div>
-    <div class="container right">
+    <div class="container">
         <div class="sub-event">
             <p class="date">September 2023 - May 2024</p>
             <h3>Manufacturing and Testing Lead</h3>
@@ -168,15 +159,9 @@ permalink: /timeline/
         </div>
     </div>
 
-    <!-- Work Experience Entry -->
-    <div class="container left">
-        <div class="content">
-            <h2>Fall 2025</h2>
-            <h3>Hardware Test Engineering Intern</h3>
-            <p>Symbotic</p>
-        </div>
-    </div>
+
 </div>
 
 </body>
 </html>
+
