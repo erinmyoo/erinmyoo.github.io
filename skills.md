@@ -9,6 +9,15 @@ table {
     max-height: none !important;
     overflow: visible !important;
 }
+table tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+}
+
+table tr:nth-child(even) {
+    background-color: #bcd4e6; /* current background color */
+    color: black;
+}    
 blockquote {
     border-left: none;
     padding-left: 10px;
