@@ -50,13 +50,14 @@ permalink: /timeline/
         .long-duration::before {
             content: '';
             position: absolute;
-            right: -10px;
+            left: 100%; /* Move the dot to the right */
             top: 20px;
             width: 20px;
             height: 20px;
             background-color: #2196F3;
             border-radius: 50%;
             z-index: 1;
+            transform: translateX(10px); /* Fine-tune positioning of the dot */
         }
 
         /* Sub-event containers (right side with dots to the left) */
@@ -70,6 +71,8 @@ permalink: /timeline/
             border-radius: 6px;
             text-align: center;
             box-sizing: border-box;
+            margin-left: 50%;
+            transform: translateX(-50%); /* Center sub-event horizontally */
         }
 
         .sub-event::before {
@@ -115,7 +118,7 @@ permalink: /timeline/
         <div class="long-duration">
             <p class="date">July - December 2025</p>
             <h3>Hardware Test Engineering Intern</h3>
-            <p>Robot Company Name</p>
+            <p>Symbotic</p>
         </div>
     </div>
     
