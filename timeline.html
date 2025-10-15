@@ -11,6 +11,13 @@ permalink: /timeline/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline</title>
     <style>
+        /* Basic Reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
 
         /* Timeline Container */
         .timeline {
@@ -20,7 +27,7 @@ permalink: /timeline/
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
         }
 
         /* Add space and center the timeline bar */
@@ -35,107 +42,90 @@ permalink: /timeline/
             transform: translateX(-50%); /* Center the timeline */
         }
 
-        /* Flexbox Containers for each event */
+        /* Container for events */
         .container {
             position: relative;
             width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
         }
 
-        .container.right {
-            align-items: flex-end;
+        /* Long-duration event container (left side with dot on right side) */
+        .long-duration {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 6px;
+            text-align: center;
         }
 
-        .container.left {
-            align-items: flex-start;
-        }
-
-        /* Timeline dot (circle) placement */
-        .container::before {
+        .long-duration::before {
             content: '';
             position: absolute;
-            top: 20px; /* Align the dot with the timeline bar */
+            right: -10px;
+            top: 20px;
             width: 20px;
             height: 20px;
             background-color: #2196F3;
             border-radius: 50%;
             z-index: 1;
-            left: -10px; /* Adjust this if the dot is off the line */
         }
 
-        .container.left::before {
-            left: -10px;
-        }
-
-        .container.right::before {
-            right: -10px;
-        }
-
-        /* Content styling for each event */
-        .content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            text-align: center;
-        }
-
-        /* Styling for the long-duration event */
-        .long-duration {
-            background-color: #2196F3;
-            color: white;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Sub-events within long-duration */
+        /* Sub-event containers (right side with dots to the left) */
         .sub-event {
+            position: relative;
+            width: 45%;
             background-color: #ff6347;
             color: white;
             padding: 10px;
+            margin: 10px;
             border-radius: 6px;
             text-align: center;
-            margin-top: 10px;
+            box-sizing: border-box;
         }
 
-        .sub-event .date {
-            font-weight: bold;
+        .sub-event::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            z-index: 1;
         }
 
-        /* Adjustments for the timeline content */
+        .container.left .sub-event {
+            align-self: flex-start;
+        }
+
+        .container.right .sub-event {
+            align-self: flex-end;
+        }
+
+        /* Content styling for each event */
         h2, h3, p {
             margin: 5px 0;
         }
 
-        /* Responsive Design */
+        /* Responsiveness */
         @media (max-width: 768px) {
-            .timeline {
-                padding: 10px;
+            .sub-event {
+                width: 90%;
             }
 
-            .container {
-                width: 100%;
-            }
-
-            .container.left, .container.right {
-                justify-content: center;
-            }
-
-            .container.left::before, .container.right::before {
-                top: -5px;
-                width: 20px;
-                height: 20px;
+            .long-duration {
+                width: 90%;
             }
         }
     </style>
 </head>
 <body>
+
 
 <div class="timeline">
     <!-- Education Entry (Long Duration) -->
