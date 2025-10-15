@@ -45,6 +45,8 @@ permalink: /timeline/
             border-radius: 6px;
             text-align: center;
             margin-right: 20px;
+            margin-left: 20px; 
+
         }
 
         .long-duration::before {
@@ -57,7 +59,7 @@ permalink: /timeline/
             background-color: #2196F3;
             border-radius: 50%;
             z-index: 1;
-            transform: translateX(10px); /* Fine-tune positioning of the dot */
+            transform: translateX(-50%); /* Fine-tune positioning of the dot */
         }
 
         /* Sub-event containers (right side with dots to the left) */
@@ -71,7 +73,8 @@ permalink: /timeline/
             border-radius: 6px;
             text-align: center;
             box-sizing: border-box;
-            margin-left: 50%; /* Align sub-event to the right side of the bar */
+            margin-right: 20px;
+            margin-left: 20px; 
             clear: both; /* Clear any float to avoid overlap with other content */
         }
         
@@ -86,6 +89,7 @@ permalink: /timeline/
             background-color: #ff6347;
             border-radius: 50%;
             z-index: 1;
+            transform: translateX(-50%);
         }
 
 
