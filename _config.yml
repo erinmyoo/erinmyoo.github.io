@@ -19,6 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   #- {file: "index.md", title: "About Me"}
   - {file: "auto_projects.md", title: "Automotive Projects"}
   - {file: "rob_projects.md", title: "Robotics Projects"}
+  - {file: "timeline.html", title: "Timeline"}
   - {file: "education.md", title: "Education"}
   - {file: "skills.md", title: "Skills"}
   #- {title: "url", url: "https://www.linkedin.com/in/erinmyoo/"}
