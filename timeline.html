@@ -19,30 +19,37 @@ permalink: /timeline/
             background-color: #f0f0f0;
         }
 
+        /* Timeline Container */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
             border-left: 2px solid #2196F3; /* Timeline bar */
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
+        /* Flexbox Containers for each event */
         .container {
             position: relative;
-            width: 50%;
+            width: 100%;
             padding: 10px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
 
         .container.right {
-            left: 50%;
-            text-align: right;
+            align-items: flex-end;
         }
 
         .container.left {
-            left: 0;
+            align-items: flex-start;
         }
 
+        /* Create the circle on the timeline */
         .container::before {
             content: '';
             position: absolute;
@@ -62,47 +69,63 @@ permalink: /timeline/
             right: -12px;
         }
 
+        /* Content styling for each event */
         .content {
             background-color: white;
             padding: 20px;
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
-        /* Long-duration event (like your undergraduate degree) */
+        /* Styling for the long-duration event */
         .long-duration {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
             background-color: #2196F3;
             color: white;
             padding: 10px;
             border-radius: 6px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         /* Sub-events within long-duration */
         .sub-event {
-            position: absolute;
-            top: 50px;
-            width: 100%;
-            background-color: #ff6347; /* Event color */
+            background-color: #ff6347;
             color: white;
             padding: 10px;
             border-radius: 6px;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .sub-event .date {
             font-weight: bold;
         }
 
-        /* Styling the timeline entries */
+        /* Adjustments for the timeline content */
         h2, h3, p {
             margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline {
+                padding: 10px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .container.left, .container.right {
+                align-items: center;
+            }
+
+            .container.left::before, .container.right::before {
+                top: -5px;
+                width: 20px;
+                height: 20px;
+            }
         }
     </style>
 </head>
@@ -117,7 +140,7 @@ permalink: /timeline/
             <p>Robot Company Name</p>
         </div>
     </div>
-  
+
     <!-- Education Entry (Long Duration) -->
     <div class="container left">
         <div class="long-duration">
@@ -125,32 +148,32 @@ permalink: /timeline/
             <h3>Bachelor of Science in Mechanical Engineering</h3>
             <p>University of Michigan</p>
         </div>
-        
+
         <!-- Sub-events within Education -->
-        <div class="sub-event" style="top: 50px; left: 0;">
-            <p class="date">Janurary - July 2025</p>
+        <div class="sub-event">
+            <p class="date">January - July 2025</p>
             <h3>Engineering Intern</h3>
             <p>Robotics Stealth Startup</p>
         </div>
-        <div class="sub-event" style="top: 50px; left: 0;">
+        <div class="sub-event">
             <p class="date">September 2024 - May 2025</p>
             <h3>Vice President and Mechanical Engineer</h3>
-            <p>Kickers<p>
+            <p>Kickers</p>
         </div>
-        <div class="sub-event" style="top: 50px; left: 0;">
+        <div class="sub-event">
             <p class="date">June - August 2024</p>
-            <h3>NSF REU: Collaborative Human-Robot Interaction for Robots in the Field</h3>
-            <p>University of Nevada, Reno<p>
+            <h3>NSF REU: Collaborative Human-Robot Interaction</h3>
+            <p>University of Nevada, Reno</p>
             <p>Built automated motor thrust stand with DAQ</p>
         </div>
-        <div class="sub-event" style="top: 50px; left: 0;">
+        <div class="sub-event">
             <p class="date">September 2023 - May 2024</p>
             <h3>Manufacturing and Testing Lead</h3>
-            <p>Solar Car<p>
+            <p>Solar Car</p>
         </div>
     </div>
-
 </div>
 
 </body>
 </html>
+
