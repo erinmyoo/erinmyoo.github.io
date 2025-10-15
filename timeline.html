@@ -11,107 +11,94 @@ permalink: /timeline/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline</title>
     <style>
-
         /* Timeline Container */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
         }
-
-        /* Add space and center the timeline bar */
-        .timeline:before {
+        
+        /* Center vertical line */
+        .timeline::before {
             content: '';
             position: absolute;
             left: 50%;
             top: 0;
             bottom: 0;
             width: 2px;
-            background-color: #2196F3; /* Timeline line */
-            transform: translateX(-50%); /* Center the timeline */
-        }
-
-        /* Long-duration event container (left side with dot on right side) */
-        .long-duration {
-            position: relative;
-            width: 30%;
-            padding: 20px;
             background-color: #2196F3;
-            color: white;
-            border-radius: 6px;
-            text-align: center;
-            margin-right: 20px;
+            transform: translateX(-50%);
         }
-
+        
+        /* Common block styling */
+        .event {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            border-radius: 6px;
+            color: white;
+            margin: 20px 0;
+        }
+        
+        /* Long-duration (left side) */
+        .long-duration {
+            background-color: #2196F3;
+            text-align: right;
+            margin-left: 0;
+            margin-right: 55%;
+        }
+        
         .long-duration::before {
             content: '';
             position: absolute;
-            left: 100%; /* Move the dot to the right */
-            top: 20px;
+            right: -11px; /* Dot on the timeline line */
+            top: 25px;
             width: 20px;
             height: 20px;
             background-color: #2196F3;
             border-radius: 50%;
-            z-index: 1;
-            transform: translateX(-50%); /* Fine-tune positioning of the dot */
-        }
-
-        /* Sub-event containers (right side with dots to the left) */
-        .sub-event {
-            position: relative;
-            width: 60%;
-            background-color: #ff6347;
-            color: white;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 6px;
-            text-align: center;
-            box-sizing: border-box;
-            margin-left: 20px;
-            clear: both; /* Clear any float to avoid overlap with other content */
+            z-index: 2;
         }
         
-        /* Dot placement for sub-events */
+        /* Sub-events (right side) */
+        .sub-event {
+            background-color: #ff6347;
+            text-align: left;
+            margin-left: 55%;
+        }
+        
         .sub-event::before {
             content: '';
             position: absolute;
-            left: -30px; /* Move the dot fully to the left of the sub-event box */
-            top: 20px;
+            left: -9px; /* Dot on the timeline line */
+            top: 25px;
             width: 20px;
             height: 20px;
             background-color: #ff6347;
             border-radius: 50%;
-            z-index: 1;
-            transform: translateX(-50%);
+            z-index: 2;
         }
-
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Responsive Design */
+        
+        /* Responsive behavior */
         @media (max-width: 768px) {
-            .long-duration, .sub-event {
+            .event {
                 width: 90%;
+                margin: 20px auto;
+                text-align: center;
             }
-
-            .sub-event {
-                margin-left: 0;
+        
+            .timeline::before {
+                left: 5px;
             }
-
-            .long-duration {
-                margin-right: 0;
+        
+            .event::before {
+                left: -25px;
+                right: auto;
             }
         }
     </style>
+
 </head>
 <body>
 
