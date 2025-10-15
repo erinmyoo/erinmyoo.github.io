@@ -71,14 +71,15 @@ permalink: /timeline/
             border-radius: 6px;
             text-align: center;
             box-sizing: border-box;
-            margin-left: 50%;
-            transform: translateX(-50%); /* Center sub-event horizontally */
+            margin-left: 50%; /* Align sub-event to the right side of the bar */
+            clear: both; /* Clear any float to avoid overlap with other content */
         }
-
+        
+        /* Dot placement for sub-events */
         .sub-event::before {
             content: '';
             position: absolute;
-            left: -10px; /* Align dot to the left of the sub-event */
+            left: -30px; /* Move the dot fully to the left of the sub-event box */
             top: 20px;
             width: 20px;
             height: 20px;
@@ -86,6 +87,7 @@ permalink: /timeline/
             border-radius: 50%;
             z-index: 1;
         }
+
 
         .container {
             display: flex;
