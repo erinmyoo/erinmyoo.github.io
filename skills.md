@@ -4,7 +4,7 @@ title: "Skills"
 
 <style>
 :root {
-    --header-bg-color: #97bcd8;  /* header background color */
+    --header-bg-color: #a9c8df;  /* header background color */
     --row-bg-color: #f4f8fb;     /* row background color */
     --text-color: black;         /* Text color */
 }
