@@ -9,112 +9,137 @@ permalink: /timeline/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline</title>
-
+    <title>Timeline - left sticky, right scroll</title>
+    
     <style>
-    /* Timeline container */
-    .timeline {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      width: 100%;
-      min-height: 100vh;
-    }
-    
-    /* Center vertical line */
-    .timeline::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      background-color: #5b8fd9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-    
-    /* Left side (long-duration) */
-    .long-duration {
-      position: fixed;
-      top: 100px;
-      left: 10%;
-      width: 30%;
-      background-color: #4c88f0;
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: right;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .long-duration::after {
-      content: "";
-      position: absolute;
-      top: 30px;
-      right: -13px;
-      width: 20px;
-      height: 20px;
-      background-color: #4c88f0;
-      border-radius: 50%;
-      z-index: 3;
-    }
-    
-    /* Right side container (scrollable sub-events) */
-    .sub-events {
-      position: relative;
-      margin-left: 55%;
-      width: 35%;
-      padding-top: 50px;
-      z-index: 2;
-    }
-    
-    /* Sub-event boxes */
-    .sub-event {
-      position: relative;
-      background-color: #e96347;
-      color: white;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .sub-event::before {
-      content: "";
-      position: absolute;
-      top: 25px;
-      left: -13px;
-      width: 20px;
-      height: 20px;
-      background-color: #e96347;
-      border-radius: 50%;
-      z-index: 3;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .timeline::before {
-        display: none;
+      :root{
+        --bg: #c7d7e2;
+        --line: #5b8fd9;
+        --left-bg: #4c88f0;
+        --right-bg: #e96347;
       }
     
+      /* Outer container - controls overall width */
+      .timeline-wrapper{
+        max-width:1100px;
+        margin:40px auto;
+        padding:20px;
+      }
+    
+      /* Two-column layout */
+      .timeline {
+        display:flex;
+        gap:0;
+        position:relative;
+        min-height:70vh; /* ensures sticky has room to stick */
+      }
+    
+      /* Left and right columns each take 50% */
+      .col-left,
+      .col-right{
+        width:50%;
+        box-sizing:border-box;
+        position:relative; /* needed for dot positioning */
+      }
+    
+      /* Vertical center line at column boundary */
+      .timeline::before{
+        content:"";
+        position:absolute;
+        left:50%;
+        top:0;
+        bottom:0;
+        width:3px;
+        background:var(--line);
+        transform:translateX(-50%);
+        z-index:1;
+      }
+    
+      /* Left column content - sticky */
+      .col-left-inner{
+        position:sticky;
+        top:24px; /* adjust how far from top it sits while scrolling */
+        padding:10px 30px 10px 10px;
+        z-index:2;
+      }
+    
+      /* Left event boxes (sit fully left of the center). Align to right inside the left column */
       .long-duration {
-        position: relative;
-        width: 80%;
-        left: 10%;
-        text-align: left;
+        background:var(--left-bg);
+        color:white;
+        padding:20px;
+        border-radius:8px;
+        text-align:right;
+        max-width:80%; /* box width inside left column */
+        margin-left:auto; /* pushes the box to the right edge of the column */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        position:relative;
       }
     
-      .sub-events {
-        width: 80%;
-        margin-left: 10%;
+      /* dot for left boxes sits exactly on column boundary (right edge of left column) */
+      .long-duration::before{
+        content:"";
+        position:absolute;
+        top:28px;
+        right:-11px; /* sits on the center line */
+        width:18px;
+        height:18px;
+        border-radius:50%;
+        background:var(--left-bg);
+        z-index:3;
+        box-shadow:0 2px 4px rgba(0,0,0,0.15);
       }
     
-      .sub-event::before {
-        left: -10px;
+      /* Right column scrolls normally (page scroll). Add a little padding so boxes don't butt against edge */
+      .col-right-inner{
+        padding:10px 30px 40px 30px;
+        z-index:2;
       }
-    }
+    
+      /* Right event boxes (sit fully right of the center). Align to left inside the right column */
+      .sub-event {
+        background:var(--right-bg);
+        color:white;
+        padding:20px;
+        border-radius:8px;
+        text-align:left;
+        max-width:80%;
+        margin-right:auto; /* ensures box sits at left side of right column */
+        margin-bottom:36px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        position:relative;
+      }
+    
+      /* dot for right boxes sits exactly on column boundary (left edge of right column) */
+      .sub-event::before{
+        content:"";
+        position:absolute;
+        top:28px;
+        left:-11px; /* sits on the center line */
+        width:18px;
+        height:18px;
+        border-radius:50%;
+        background:var(--right-bg);
+        z-index:3;
+        box-shadow:0 2px 4px rgba(0,0,0,0.15);
+      }
+    
+      /* small heading tweaks */
+      h3 { margin:0 0 8px 0; font-size:18px; }
+      p  { margin:0; line-height:1.4; }
+    
+      /* Responsive: stack columns on small screens */
+      @media (max-width:800px){
+        .timeline { display:block; }
+        .col-left, .col-right { width:100%; }
+        .timeline::before{ left:10px; height: auto; } /* line shifted left for stacked layout */
+        .col-left-inner{ position:relative; top:auto; padding-left:40px; padding-right:10px; }
+        .long-duration{ margin-left:0; max-width:100%; text-align:left; }
+        .long-duration::before{ right:auto; left:10px; }
+        .col-right-inner{ padding-left:40px; padding-right:20px; }
+        .sub-event{ margin-right:0; max-width:100%; }
+        .sub-event::before{ left:10px; }
+      }
     </style>
 
 </head>
