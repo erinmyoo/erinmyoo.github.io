@@ -24,22 +24,34 @@ permalink: /timeline/
             gap: 40px;
         }
 
+        /* Add space and center the timeline bar */
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #2196F3; /* Timeline line */
+            transform: translateX(-50%); /* Center the timeline */
+        }
+
         /* Flexbox Containers for each event */
         .container {
             position: relative;
-            width: 100%;
+            width: 50%;
             padding: 10px;
             box-sizing: border-box;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
         }
 
         .container.right {
-            align-items: flex-end;
+            justify-content: flex-end;
         }
 
         .container.left {
-            align-items: flex-start;
+            justify-content: flex-start;
         }
 
         /* Timeline dot (circle) placement */
@@ -69,7 +81,8 @@ permalink: /timeline/
             padding: 20px;
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
+            width: 80%;
+            text-align: center;
         }
 
         /* Styling for the long-duration event */
@@ -112,7 +125,7 @@ permalink: /timeline/
             }
 
             .container.left, .container.right {
-                align-items: center;
+                justify-content: center;
             }
 
             .container.left::before, .container.right::before {
@@ -170,4 +183,3 @@ permalink: /timeline/
 
 </body>
 </html>
-
