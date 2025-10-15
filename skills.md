@@ -3,21 +3,35 @@ title: "Skills"
 ---
 
 <style>
+:root {
+    --header-bg-color: #97bcd8;  /* header background color */
+    --row-bg-color: #f4f8fb;     /* row background color */
+    --text-color: black;         /* Text color */
+}
 table {
     border-collapse: collapse;
     width: 100%;
     max-height: none !important;
     overflow: visible !important;
 }
-table tr:nth-child(odd) {
-    background-color: white;
-    color: black;
+/* Table header customization */
+table th {
+    background-color: var(--header-bg-color); /* Use header background color variable */
+    color: var(--text-color);                  /* Text color */
+    padding: 10px;                             /* Adjust padding as needed */
+    text-align: left;                          /* Align header text to the left */
+}
+/* Set uniform background color for all rows (both odd and even) */
+table tr {
+    background-color: var(--row-bg-color); /* Use row background color variable */
+    color: var(--text-color);               /* Text color */
 }
 
-table tr:nth-child(even) {
-    background-color: #bcd4e6; /* current background color */
-    color: black;
-}    
+/* Optional: Style for table cells */
+table td, table th {
+    padding: 10px; /* Add padding for better readability */
+    border: 1px solid #ddd; /* Light border for each cell */
+} 
 blockquote {
     border-left: none;
     padding-left: 10px;
