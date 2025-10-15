@@ -145,57 +145,51 @@ permalink: /timeline/
 </head>
 <body>
 
-<div class="timeline">
-        <!-- Another Work Experience (example) -->
-    <div class="container">
-        <div class="sub-event">
-            <p class="date">July - December 2025</p>
-            <h3>Hardware Test Engineering Intern</h3>
-            <p>Symbotic</p>
-        </div>
-    </div>
-    
-    <!-- Long-duration Event (Education) -->
-    <div class="container">
+<div class="timeline-wrapper">
+  <div class="timeline">
+
+    <!-- LEFT COLUMN: sticky (long-duration) -->
+    <div class="col-left" aria-hidden="false">
+      <div class="col-left-inner">
         <div class="long-duration">
-            <h2>2021–2025</h2>
-            <h3>Bachelor of Science in Mechanical Engineering</h3>
-            <p>University of Michigan</p>
+          <h3>2021–2025</h3>
+          <p><strong>Bachelor of Science in Mechanical Engineering</strong><br>University of Michigan</p>
         </div>
+        <!-- add other left long-duration items here if needed -->
+          <div class="long-duration">
+          <h3>July - December 2025</h3>
+          <p><strong>Hardware Test Engineering Intern</strong><br>Symbotic</p>
+        </div>
+          
+      </div>
     </div>
 
-    <!-- Sub-events (e.g., internships, roles) -->
-    <div class="container">
+    <!-- RIGHT COLUMN: scrollable sub-events -->
+    <div class="col-right">
+      <div class="col-right-inner">
         <div class="sub-event">
-            <p class="date">January - July 2025</p>
-            <h3>Engineering Intern</h3>
-            <p>Robotics Stealth Startup</p>
+          <h3>January - July 2025</h3>
+          <p><strong>Engineering Intern</strong><br>Robotics Stealth Startup</p>
         </div>
-    </div>
-    <div class="container">
-        <div class="sub-event">
-            <p class="date">September 2024 - May 2025</p>
-            <h3>Vice President and Mechanical Engineer</h3>
-            <p>Wolverbot Kickers</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="sub-event">
-            <p class="date">June - August 2024</p>
-            <h3>NSF REU: Collaborative Human-Robot Interaction</h3>
-            <p>University of Nevada, Reno</p>
-            <p>Built automated motor thrust stand with DAQ</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="sub-event">
-            <p class="date">September 2023 - May 2024</p>
-            <h3>Manufacturing and Testing Lead</h3>
-            <p>Solar Car</p>
-        </div>
-    </div>
 
+        <div class="sub-event">
+          <h3>September 2024 - May 2025</h3>
+          <p><strong>Vice President and Mechanical Engineer</strong><br>Wolverbot Kickers</p>
+        </div>
 
+        <div class="sub-event">
+          <h3>June - August 2024</h3>
+          <p><strong>NSF REU: Collaborative Human-Robot Interaction</strong><br>University of Nevada, Reno<br>Built automated motor thrust stand with DAQ</p>
+        </div>
+
+        <div class="sub-event">
+          <h3>September 2023 - May 2024</h3>
+          <p><strong>Manufacturing and Testing Lead</strong><br>Solar Car</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
