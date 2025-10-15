@@ -23,8 +23,8 @@ permalink: /timeline/
           margin: 50px auto;
           padding: 20px 0;
         }
-    
-        /* Vertical Line */
+        
+        /* Central vertical line */
         .timeline::before {
           content: "";
           position: absolute;
@@ -36,59 +36,59 @@ permalink: /timeline/
           transform: translateX(-50%);
           z-index: 1;
         }
-    
-        /* Common Event Box Styling */
+        
+        /* Common box style */
         .event {
           position: relative;
-          width: 45%;
+          width: 40%;
           padding: 20px;
           border-radius: 8px;
           color: white;
           box-sizing: border-box;
           z-index: 2;
         }
-    
-        /* Long Duration (Left Side) */
+        
+        /* ----- LEFT SIDE (long duration) ----- */
         .long-duration {
           background-color: #4c88f0;
           text-align: right;
-          margin-left: 0;
-          margin-right: auto;
           left: 0;
+          margin-right: auto;
         }
-    
+        
         .long-duration::before {
           content: "";
           position: absolute;
           top: 25px;
-          right: -11px; /* dot aligns to the timeline */
-          width: 20px;
-          height: 20px;
+          right: -10px; /* align dot on center line */
+          width: 18px;
+          height: 18px;
           background-color: #4c88f0;
           border-radius: 50%;
           z-index: 3;
         }
-    
-        /* Sub-Events (Right Side) */
+        
+        /* ----- RIGHT SIDE (sub events) ----- */
         .sub-event {
           background-color: #e96347;
           text-align: left;
-          margin-right: 0;
           margin-left: auto;
           right: 0;
         }
-    
+        
         .sub-event::before {
           content: "";
           position: absolute;
           top: 25px;
-          left: -11px; /* dot aligns to the timeline */
-          width: 20px;
-          height: 20px;
+          left: -10px; /* align dot on center line */
+          width: 18px;
+          height: 18px;
           background-color: #e96347;
           border-radius: 50%;
           z-index: 3;
         }
+
+
     
         /* Responsive */
         @media (max-width: 768px) {
