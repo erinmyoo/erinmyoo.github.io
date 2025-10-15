@@ -12,103 +12,110 @@ permalink: /timeline/
     <title>Timeline</title>
 
     <style>
-        body {
-          background-color: #c7d7e2;
-          font-family: Arial, sans-serif;
-        }
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      min-height: 100vh;
+    }
     
-        .timeline {
-          position: relative;
-          max-width: 1000px;
-          margin: 50px auto;
-          padding: 20px 0;
-        }
-        
-        /* Central vertical line */
-        .timeline::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          width: 3px;
-          background-color: #5b8fd9;
-          transform: translateX(-50%);
-          z-index: 1;
-        }
-        
-        /* Common box style */
-        .event {
-          position: relative;
-          width: 40%;
-          padding: 20px;
-          border-radius: 8px;
-          color: white;
-          box-sizing: border-box;
-          z-index: 2;
-        }
-        
-        /* ----- LEFT SIDE (long duration) ----- */
-        .long-duration {
-          background-color: #4c88f0;
-          text-align: right;
-          left: 0;
-          margin-right: auto;
-        }
-        
-        .long-duration::before {
-          content: "";
-          position: absolute;
-          top: 25px;
-          right: -10px; /* align dot on center line */
-          width: 18px;
-          height: 18px;
-          background-color: #4c88f0;
-          border-radius: 50%;
-          z-index: 3;
-        }
-        
-        /* ----- RIGHT SIDE (sub events) ----- */
-        .sub-event {
-          background-color: #e96347;
-          text-align: left;
-          margin-left: auto;
-          right: 0;
-        }
-        
-        .sub-event::before {
-          content: "";
-          position: absolute;
-          top: 25px;
-          left: -10px; /* align dot on center line */
-          width: 18px;
-          height: 18px;
-          background-color: #e96347;
-          border-radius: 50%;
-          z-index: 3;
-        }
-
-
+    /* Center vertical line */
+    .timeline::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background-color: #5b8fd9;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
     
-        /* Responsive */
-        @media (max-width: 768px) {
-          .timeline::before {
-            left: 10px;
-          }
+    /* Left side (long-duration) */
+    .long-duration {
+      position: fixed;
+      top: 100px;
+      left: 10%;
+      width: 30%;
+      background-color: #4c88f0;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: right;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
     
-          .event {
-            width: 90%;
-            margin: 20px auto;
-            text-align: left;
-          }
+    .long-duration::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: -13px;
+      width: 20px;
+      height: 20px;
+      background-color: #4c88f0;
+      border-radius: 50%;
+      z-index: 3;
+    }
     
-          .long-duration::before,
-          .sub-event::before {
-            left: -25px;
-            right: auto;
-          }
-        }
-  </style>
+    /* Right side container (scrollable sub-events) */
+    .sub-events {
+      position: relative;
+      margin-left: 55%;
+      width: 35%;
+      padding-top: 50px;
+      z-index: 2;
+    }
+    
+    /* Sub-event boxes */
+    .sub-event {
+      position: relative;
+      background-color: #e96347;
+      color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sub-event::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: -13px;
+      width: 20px;
+      height: 20px;
+      background-color: #e96347;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .timeline::before {
+        display: none;
+      }
+    
+      .long-duration {
+        position: relative;
+        width: 80%;
+        left: 10%;
+        text-align: left;
+      }
+    
+      .sub-events {
+        width: 80%;
+        margin-left: 10%;
+      }
+    
+      .sub-event::before {
+        left: -10px;
+      }
+    }
+    </style>
 
 </head>
 <body>
