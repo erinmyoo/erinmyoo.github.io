@@ -17,4 +17,4 @@ title: ""
 - 2021 Georgia Seal of Biliteracy verifying professional-level biliteracy and bilingualism in English and French
 - Junior Leadership Award 2020
 - President’s Volunteer Service Award 2019
-- Varsity Golf
+- Varsity Golf 2017-2020
