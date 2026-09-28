@@ -41,12 +41,12 @@ blockquote {
 }
 </style>
 
-| CAD                             | FEA               | Programming Languages | Manufacturing            | Languages |
-| ---                             | ---               | ---                   | ---                      | ---       |        
-| Solidworks                      | Altair Hyperworks | Python                | Mill                     | Korean    |
-| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printing              | French    |   
-| Onshape                         |                   | C++                   | Solder                   |           |
-|                                 |                   | ROS/ROS2              | Lathe                    |           |
-|                                 |                   |                       | Silver Solder            |           |
-|                                 |                   |                       | Wetlay Carbon Fiber      |           |
+| CAD                             | FEA               | Programming Languages | Manufacturing            |
+| ---                             | ---               | ---                   | ---                      |      
+| Solidworks and PDM              | Altair Hyperworks | Python                | Mill                     |
+| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printing              |
+| Onshape                         |                   | C++                   | Solder                   |
+| AutoCAD                         |                   | ROS/ROS2              | Lathe                    |
+|                                 |                   |                       | Silver Solder            |
+|                                 |                   |                       | Wetlay Carbon Fiber      |
 
