@@ -3,7 +3,8 @@ title: ""
 ---
 
 ## Georgia Institute of Technology MS Mechanical Engineering
-- Start January 2026
+- Expected December 2027
+- BioMedical Mechatronics Lab (BM2)
 
 ## University of Michigan BSE Mechanical Engineering 2025
 - Robotics Concentration
