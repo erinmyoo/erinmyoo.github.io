@@ -8,11 +8,13 @@ title: "Solar Car"
 
 ## Wheel Assembly
 Designing the front hub and rear rim on the 2025 Solar Car to fit new packaging constraints and interface with the new motor.
+
 <!-- 
 <div style="text-align: center;">
   <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="40%">
 </div>
 -->
+
 <div class="slideshow" id="hub-slideshow">
   <button class="prev" onclick="changeSlide('hub-slideshow', -1)">&#10094;</button>
 
