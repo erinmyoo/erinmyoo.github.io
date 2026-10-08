@@ -41,12 +41,14 @@ blockquote {
 }
 </style>
 
-| CAD                             | FEA               | Programming Languages | Manufacturing            |
-| ---                             | ---               | ---                   | ---                      |      
-| Solidworks and PDM              | Altair Hyperworks | Python                | Mill                     |
-| Siemens NX and Teamcenter       | ANSYS             | MATLAB                | 3D Printing              |
-| Onshape                         |                   | C++                   | Solder                   |
-| AutoCAD                         |                   | ROS/ROS2              | Lathe                    |
-|                                 |                   |                       | Silver Solder            |
-|                                 |                   |                       | Wetlay Carbon Fiber      |
+| CAD                             | FEA               | Microcontrollers & SBCs  | Programming Languages | Manufacturing        | Electrical & Test    |
+| ---                             | ---               | ---                      | ---                   | ---                  | ---                  |
+| Solidworks and PDM              | Altair Hyperworks | Raspberry Pi             | Python                | 3D Printing          | Soldering            |
+| Siemens NX and Teamcenter       | ANSYS             | Arduino                  | MATLAB                | Bandsaw              | Multimeter           |
+| Onshape                         |                   | Khadas Edge2             | C++                   | Waterjet (OMAX)      | Oscilloscope         |
+| Autodesk AutoCAD                |                   |                          | ROS/ROS2              | Mill                 | IO Link              |
+|                                 |                   |                          | Lathe                 |                      |                      |
+|                                 |                   |                          | Silver Solder         |                      |                      |
+|                                 |                   |                          | Wetlay Carbon Fiber   |                      |                      |
+
 
