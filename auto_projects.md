@@ -80,18 +80,18 @@ The tooling, initial plugs, for the upper and lower parts of the car was designe
 </div>
 
 
+
 <script>
 const slideIndexes = {};
 
 function showSlide(slideshowId, index) {
   const slideshow = document.getElementById(slideshowId);
-  const slides = slideshow.querySelectorAll(".slides img");
+  if (!slideshow) return;
 
+  const slides = slideshow.querySelectorAll(".slides img");
   if (slides.length === 0) return;
 
-  if (index >= slides.length) index = 0;
-  if (index < 0) index = slides.length - 1;
-
+  index = (index + slides.length) % slides.length;
   slideIndexes[slideshowId] = index;
 
   slides.forEach((slide, i) => {
@@ -100,16 +100,19 @@ function showSlide(slideshowId, index) {
 }
 
 function changeSlide(slideshowId, direction) {
-  const currentIndex = slideIndexes[slideshowId] ?? 0;
-  showSlide(slideshowId, currentIndex + direction);
+  showSlide(
+    slideshowId,
+    (slideIndexes[slideshowId] || 0) + direction
+  );
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".slideshow").forEach(slideshow => {
     showSlide(slideshow.id, 0);
   });
 });
-<script>
+</script>
+
 
 <style>
 .slideshow {
@@ -128,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 .slides img {
+  display: none;
   width: 100%;
   max-height: 500px;
   object-fit: contain;
@@ -148,13 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
   z-index: 2;
 }
 
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
+.prev { left: 0; }
+.next { right: 0; }
 
 .prev:hover,
 .next:hover {
