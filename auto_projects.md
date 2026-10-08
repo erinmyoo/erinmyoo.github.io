@@ -13,32 +13,32 @@ Designing the front hub and rear rim on the 2025 Solar Car to fit new packaging 
   <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="40%">
 </div>
 -->
-<div class="slideshow">
-  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+<div class="slideshow" id="hub-slideshow">
+  <button class="prev" onclick="changeSlide('hub-slideshow', -1)">&#10094;</button>
 
   <div class="slides">
-    <img src="/../hub-ppt-images/Hub_DR_slide_1">
-    <img src="/../hub-ppt-images/Hub_DR_slide_2">
-    <img src="/../hub-ppt-images/Hub_DR_slide_3">
-    <img src="/../hub-ppt-images/Hub_DR_slide_4">
-    <img src="/../hub-ppt-images/Hub_DR_slide_5">
-    <img src="/../hub-ppt-images/Hub_DR_slide_6">
-    <img src="/../hub-ppt-images/Hub_DR_slide_7">
-    <img src="/../hub-ppt-images/Hub_DR_slide_8">
-    <img src="/../hub-ppt-images/Hub_DR_slide_9">
-    <img src="/../hub-ppt-images/Hub_DR_slide_10">
-    <img src="/../hub-ppt-images/Hub_DR_slide_11">
-    <img src="/../hub-ppt-images/Hub_DR_slide_12">
+    <img src="/../hub-ppt-images/Hub_DR_slide_1.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_2.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_3.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_4.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_5.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_6.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_7.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_8.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_9.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_10.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_11.png">
+    <img src="/../hub-ppt-images/Hub_DR_slide_12.png">
   </div>
 
-  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  <button class="next" onclick="changeSlide('hub-slideshow', 1)">&#10095;</button>
 </div>
 
 ## Axle Optimization
 The axle on the 2023 Solar Car (Astrum) was optimized to reduce mass and deflection while prioritizing minimizing bearing resistance. Analysis of the stress and deflection of the axle under 3 load cases was done through ANSYS, also exploring different axle geometries and materials. This analysis will inform the design of the 2025 Solar Car axle as cell as its impact on race time vs cost.
 
-<div class="slideshow">
-  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+<div class="slideshow" id="axle-slideshow">
+  <button class="prev" onclick="changeSlide('axle-slideshow', -1)">&#10094;</button>
 
   <div class="slides">
     <img src="/../axle-ppt-images/Axle_Opt_DR_slide_1.png">
@@ -62,28 +62,8 @@ The axle on the 2023 Solar Car (Astrum) was optimized to reduce mass and deflect
     <img src="/../axle-ppt-images/Axle_Opt_DR_slide_19.png">
   </div>
 
-  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  <button class="next" onclick="changeSlide('axle-slideshow', -1)">&#10095;</button>
 </div>
-
-<script>
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slides img");
-
-function showSlide(index) {
-  if (index >= slides.length) slideIndex = 0;
-  if (index < 0) slideIndex = slides.length - 1;
-
-  slides.forEach(slide => slide.style.display = "none");
-  slides[slideIndex].style.display = "block";
-}
-
-function changeSlide(direction) {
-  slideIndex += direction;
-  showSlide(slideIndex);
-}
-
-showSlide(slideIndex);
-</script>
 
 ## Mule Car Chassis
 The creation, design and manufacturing of the Mule Car Chassis on the Solar Car team was completed in a 2 week span for the Mechanical and Electrical Divisions to test their systems and components. I created the CAD design and ran beam-bending hand calcs as well as FEA to meet safety regulations and safety factor of 1.5. I also complied a BOM and coordinated the manufacturing process (welding and waterjet) for the chassis. I had complete ownership of this project as a new member of the team.
@@ -98,6 +78,37 @@ The tooling, initial plugs, for the upper and lower parts of the car was designe
 <div style="text-align: center;">
   <img alt="Initial Lower Plug Isometric View" src="/../portfolio-images/InitialLowerPlugIsometricView.png" width="45%">
 </div>
+
+
+
+const slideIndexes = {};
+
+function showSlide(slideshowId, index) {
+  const slideshow = document.getElementById(slideshowId);
+  const slides = slideshow.querySelectorAll(".slides img");
+
+  if (slides.length === 0) return;
+
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+
+  slideIndexes[slideshowId] = index;
+
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function changeSlide(slideshowId, direction) {
+  const currentIndex = slideIndexes[slideshowId] ?? 0;
+  showSlide(slideshowId, currentIndex + direction);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".slideshow").forEach(slideshow => {
+    showSlide(slideshow.id, 0);
+  });
+});
 
 
 <style>
