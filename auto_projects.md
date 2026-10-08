@@ -80,7 +80,7 @@ The tooling, initial plugs, for the upper and lower parts of the car was designe
 </div>
 
 
-
+<script>
 const slideIndexes = {};
 
 function showSlide(slideshowId, index) {
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(slideshow.id, 0);
   });
 });
-
+<script>
 
 <style>
 .slideshow {
