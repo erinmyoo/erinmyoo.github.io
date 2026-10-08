@@ -8,9 +8,51 @@ title: "Solar Car"
 
 ## Wheel Assembly
 Designing the front hub and rear rim on the 2025 Solar Car to fit new packaging constraints and interface with the new motor.
+<!-- 
 <div style="text-align: center;">
   <img alt="Machined Front Hub bolted to the rotor disc for mule car testing" src="/../portfolio-images/MachinedFrontHub.png" width="40%">
 </div>
+-->
+<div class="slideshow">
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+  <div class="slides">
+    <img src="/../hub-ppt-images/Hub_DR_slide_1">
+    <img src="/../hub-ppt-images/Hub_DR_slide_2">
+    <img src="/../hub-ppt-images/Hub_DR_slide_3">
+    <img src="/../hub-ppt-images/Hub_DR_slide_4">
+    <img src="/../hub-ppt-images/Hub_DR_slide_5">
+    <img src="/../hub-ppt-images/Hub_DR_slide_6">
+    <img src="/../hub-ppt-images/Hub_DR_slide_7">
+    <img src="/../hub-ppt-images/Hub_DR_slide_8">
+    <img src="/../hub-ppt-images/Hub_DR_slide_9">
+    <img src="/../hub-ppt-images/Hub_DR_slide_10">
+    <img src="/../hub-ppt-images/Hub_DR_slide_11">
+    <img src="/../hub-ppt-images/Hub_DR_slide_12">
+  </div>
+
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slides img");
+
+function showSlide(index) {
+  if (index >= slides.length) slideIndex = 0;
+  if (index < 0) slideIndex = slides.length - 1;
+
+  slides.forEach(slide => slide.style.display = "none");
+  slides[slideIndex].style.display = "block";
+}
+
+function changeSlide(direction) {
+  slideIndex += direction;
+  showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+</script>
 
 ## Axle Optimization
 The axle on the 2023 Solar Car (Astrum) was optimized to reduce mass and deflection while prioritizing minimizing bearing resistance. Analysis of the stress and deflection of the axle under 3 load cases was done through ANSYS, also exploring different axle geometries and materials. This analysis will inform the design of the 2025 Solar Car axle as cell as its impact on race time vs cost.
