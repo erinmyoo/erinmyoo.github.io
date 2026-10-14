@@ -52,3 +52,11 @@ blockquote {
 |                                 |                   |                          | Wetlay Carbon Fiber   |                      |                      |
 
 
+<p align="center">
+  <img src="/../portfolio-images/ASME_GD&T_Certificate.png">
+</p>
+
+<p align="center">
+  <img src="/../portfolio-images/Solidworks_Associate_Certificate.png">
+</p>
+
