@@ -12,13 +12,13 @@ I assisted with optimizing the second iteration of an amphibious UAV for water r
   <button class="prev" onclick="changeSlide('reu-slideshow', -1)">&#10094;</button>
 
   <div class="slides">
-    <img src="/../hub-ppt-images/REU_slide_1.png">
-    <img src="/../hub-ppt-images/REU_slide_2.png">
-    <img src="/../hub-ppt-images/REU_slide_3.png">
-    <img src="/../hub-ppt-images/REU_slide_4.png">
-    <img src="/../hub-ppt-images/REU_slide_5.png">
-    <img src="/../hub-ppt-images/REU_slide_6.png">
-    <img src="/../hub-ppt-images/REU_slide_7.png">
+    <img src="/../reu-ppt-images/REU_slide_1.png">
+    <img src="/../reu-ppt-images/REU_slide_2.png">
+    <img src="/../reu-ppt-images/REU_slide_3.png">
+    <img src="/../reu-ppt-images/REU_slide_4.png">
+    <img src="/../reu-ppt-images/REU_slide_5.png">
+    <img src="/../reu-ppt-images/REU_slide_6.png">
+    <img src="/../reu-ppt-images/REU_slide_7.png">
   </div>
 
   <button class="next" onclick="changeSlide('reu-slideshow', 1)">&#10095;</button>
